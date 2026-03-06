@@ -10,7 +10,7 @@ namespace PasswordGenerator
     {
         Random rnd = new Random();
 
-        // Store real passwords in memory
+        
         Dictionary<string, string> savedPasswords = new Dictionary<string, string>();
 
         public Form1()
@@ -80,10 +80,10 @@ namespace PasswordGenerator
 
             string password = txtPassword.Text;
 
-            // Save password in dictionary
+            
             savedPasswords[account] = password;
 
-            // Masked password
+            
             string hidden = new string('*', password.Length);
 
             listSaved.Items.Add(account + " - " + hidden);

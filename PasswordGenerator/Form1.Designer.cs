@@ -29,109 +29,175 @@
 
         private void InitializeComponent()
         {
-            this.txtPassword = new System.Windows.Forms.TextBox();
-            this.btnGenerate = new System.Windows.Forms.Button();
-            this.btnCopy = new System.Windows.Forms.Button();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.numericLength = new System.Windows.Forms.NumericUpDown();
-            this.chkUpper = new System.Windows.Forms.CheckBox();
-            this.chkLower = new System.Windows.Forms.CheckBox();
-            this.chkNumbers = new System.Windows.Forms.CheckBox();
-            this.chkSymbols = new System.Windows.Forms.CheckBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.listSaved = new System.Windows.Forms.ListBox();
-            this.labelSaved = new System.Windows.Forms.Label();
-            this.txtAccount = new System.Windows.Forms.TextBox();
-            this.labelAccount = new System.Windows.Forms.Label();
-
-            ((System.ComponentModel.ISupportInitialize)(this.numericLength)).BeginInit();
-            this.SuspendLayout();
-
+            txtPassword = new TextBox();
+            btnGenerate = new Button();
+            btnCopy = new Button();
+            btnSave = new Button();
+            numericLength = new NumericUpDown();
+            chkUpper = new CheckBox();
+            chkLower = new CheckBox();
+            chkNumbers = new CheckBox();
+            chkSymbols = new CheckBox();
+            label1 = new Label();
+            listSaved = new ListBox();
+            labelSaved = new Label();
+            txtAccount = new TextBox();
+            labelAccount = new Label();
+            label2 = new Label();
+            ((System.ComponentModel.ISupportInitialize)numericLength).BeginInit();
+            SuspendLayout();
+            // 
             // txtPassword
-            this.txtPassword.Location = new System.Drawing.Point(20, 80);
-            this.txtPassword.Size = new System.Drawing.Size(240, 23);
-
-            // labelAccount
-            this.labelAccount.Text = "Account";
-            this.labelAccount.Location = new System.Drawing.Point(20, 50);
-
-            // txtAccount
-            this.txtAccount.Location = new System.Drawing.Point(100, 50);
-            this.txtAccount.Size = new System.Drawing.Size(160, 23);
-
-            // label1 (Password Length)
-            this.label1.Text = "Password Length";
-            this.label1.Location = new System.Drawing.Point(20, 110);
-
-            // numericLength
-            this.numericLength.Location = new System.Drawing.Point(150, 110);
-            this.numericLength.Minimum = 4;
-            this.numericLength.Maximum = 64;
-            this.numericLength.Value = 12;
-
-            // chkUpper
-            this.chkUpper.Text = "Uppercase (A-Z)";
-            this.chkUpper.Location = new System.Drawing.Point(20, 140);
-
-            // chkLower
-            this.chkLower.Text = "Lowercase (a-z)";
-            this.chkLower.Location = new System.Drawing.Point(20, 170);
-            this.chkLower.Checked = true;
-
-            // chkNumbers
-            this.chkNumbers.Text = "Numbers (0-9)";
-            this.chkNumbers.Location = new System.Drawing.Point(20, 200);
-
-            // chkSymbols
-            this.chkSymbols.Text = "Symbols (!@#)";
-            this.chkSymbols.Location = new System.Drawing.Point(20, 230);
-
+            // 
+            txtPassword.Location = new Point(20, 80);
+            txtPassword.Name = "txtPassword";
+            txtPassword.Size = new Size(240, 23);
+            txtPassword.TabIndex = 0;
+            // 
             // btnGenerate
-            this.btnGenerate.Text = "Generate";
-            this.btnGenerate.Location = new System.Drawing.Point(20, 260);
-            this.btnGenerate.Click += new System.EventHandler(this.btnGenerate_Click);
-
+            // 
+            btnGenerate.Location = new Point(20, 260);
+            btnGenerate.Name = "btnGenerate";
+            btnGenerate.Size = new Size(75, 23);
+            btnGenerate.TabIndex = 1;
+            btnGenerate.Text = "Generate";
+            btnGenerate.Click += btnGenerate_Click;
+            // 
             // btnCopy
-            this.btnCopy.Text = "Copy";
-            this.btnCopy.Location = new System.Drawing.Point(120, 260);
-            this.btnCopy.Click += new System.EventHandler(this.btnCopy_Click);
-
+            // 
+            btnCopy.Location = new Point(120, 260);
+            btnCopy.Name = "btnCopy";
+            btnCopy.Size = new Size(75, 23);
+            btnCopy.TabIndex = 2;
+            btnCopy.Text = "Copy";
+            btnCopy.Click += btnCopy_Click;
+            // 
             // btnSave
-            this.btnSave.Text = "Save";
-            this.btnSave.Location = new System.Drawing.Point(200, 260);
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-
-            // labelSaved
-            this.labelSaved.Text = "Saved Passwords";
-            this.labelSaved.Location = new System.Drawing.Point(320, 20);
-
+            // 
+            btnSave.Location = new Point(200, 260);
+            btnSave.Name = "btnSave";
+            btnSave.Size = new Size(75, 23);
+            btnSave.TabIndex = 3;
+            btnSave.Text = "Save";
+            btnSave.Click += btnSave_Click;
+            // 
+            // numericLength
+            // 
+            numericLength.Location = new Point(150, 110);
+            numericLength.Maximum = new decimal(new int[] { 64, 0, 0, 0 });
+            numericLength.Minimum = new decimal(new int[] { 4, 0, 0, 0 });
+            numericLength.Name = "numericLength";
+            numericLength.Size = new Size(120, 23);
+            numericLength.TabIndex = 4;
+            numericLength.Value = new decimal(new int[] { 9, 0, 0, 0 });
+            // 
+            // chkUpper
+            // 
+            chkUpper.Location = new Point(20, 140);
+            chkUpper.Name = "chkUpper";
+            chkUpper.Size = new Size(104, 24);
+            chkUpper.TabIndex = 5;
+            chkUpper.Text = "Uppercase (A-Z)";
+            // 
+            // chkLower
+            // 
+            chkLower.Checked = true;
+            chkLower.CheckState = CheckState.Checked;
+            chkLower.Location = new Point(20, 170);
+            chkLower.Name = "chkLower";
+            chkLower.Size = new Size(104, 24);
+            chkLower.TabIndex = 6;
+            chkLower.Text = "Lowercase (a-z)";
+            // 
+            // chkNumbers
+            // 
+            chkNumbers.Location = new Point(20, 200);
+            chkNumbers.Name = "chkNumbers";
+            chkNumbers.Size = new Size(104, 24);
+            chkNumbers.TabIndex = 7;
+            chkNumbers.Text = "Numbers (0-9)";
+            // 
+            // chkSymbols
+            // 
+            chkSymbols.Location = new Point(20, 230);
+            chkSymbols.Name = "chkSymbols";
+            chkSymbols.Size = new Size(104, 24);
+            chkSymbols.TabIndex = 8;
+            chkSymbols.Text = "Symbols (!@#)";
+            // 
+            // label1
+            // 
+            label1.Location = new Point(20, 110);
+            label1.Name = "label1";
+            label1.Size = new Size(100, 23);
+            label1.TabIndex = 9;
+            label1.Text = "Password Length";
+            // 
             // listSaved
-            this.listSaved.Location = new System.Drawing.Point(320, 50);
-            this.listSaved.Size = new System.Drawing.Size(200, 250);
-            this.listSaved.DoubleClick += new System.EventHandler(this.listSaved_DoubleClick);
-
+            // 
+            listSaved.Location = new Point(320, 50);
+            listSaved.Name = "listSaved";
+            listSaved.Size = new Size(200, 244);
+            listSaved.TabIndex = 10;
+            listSaved.DoubleClick += listSaved_DoubleClick;
+            // 
+            // labelSaved
+            // 
+            labelSaved.Location = new Point(320, 20);
+            labelSaved.Name = "labelSaved";
+            labelSaved.Size = new Size(191, 23);
+            labelSaved.TabIndex = 11;
+            labelSaved.Text = "Saved Passwords";
+            // 
+            // txtAccount
+            // 
+            txtAccount.Location = new Point(77, 50);
+            txtAccount.Name = "txtAccount";
+            txtAccount.Size = new Size(183, 23);
+            txtAccount.TabIndex = 12;
+            // 
+            // labelAccount
+            // 
+            labelAccount.Location = new Point(20, 50);
+            labelAccount.Name = "labelAccount";
+            labelAccount.Size = new Size(100, 23);
+            labelAccount.TabIndex = 13;
+            labelAccount.Text = "Account";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(474, 297);
+            label2.Name = "label2";
+            label2.Size = new Size(46, 15);
+            label2.TabIndex = 14;
+            label2.Text = "By Kara";
+            // 
             // Form1
-            this.ClientSize = new System.Drawing.Size(550, 320);
-            this.Controls.Add(this.txtPassword);
-            this.Controls.Add(this.btnGenerate);
-            this.Controls.Add(this.btnCopy);
-            this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.numericLength);
-            this.Controls.Add(this.chkUpper);
-            this.Controls.Add(this.chkLower);
-            this.Controls.Add(this.chkNumbers);
-            this.Controls.Add(this.chkSymbols);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.listSaved);
-            this.Controls.Add(this.labelSaved);
-            this.Controls.Add(this.txtAccount);
-            this.Controls.Add(this.labelAccount);
-
-            this.Text = "Password Generator";
-
-            ((System.ComponentModel.ISupportInitialize)(this.numericLength)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            // 
+            ClientSize = new Size(550, 320);
+            Controls.Add(label2);
+            Controls.Add(txtPassword);
+            Controls.Add(btnGenerate);
+            Controls.Add(btnCopy);
+            Controls.Add(btnSave);
+            Controls.Add(numericLength);
+            Controls.Add(chkUpper);
+            Controls.Add(chkLower);
+            Controls.Add(chkNumbers);
+            Controls.Add(chkSymbols);
+            Controls.Add(label1);
+            Controls.Add(listSaved);
+            Controls.Add(labelSaved);
+            Controls.Add(txtAccount);
+            Controls.Add(labelAccount);
+            Name = "Form1";
+            Text = "Password Generator";
+            ((System.ComponentModel.ISupportInitialize)numericLength).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
+
+        private Label label2;
     }
 }
